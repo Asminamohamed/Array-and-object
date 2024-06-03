@@ -1,0 +1,112 @@
+//JSON FORMAT
+
+const resume = {
+    "personalInformation": {
+      "name": "Asmina",
+      "address": "122,Ad garden,France",
+      "phone": "123456789107",
+      "email": "Asmi.will@example.com",
+      "linkedin": "https://www.linkedin.com/in/Asmina",
+      "github": "https://github.com/Asmina"
+    },
+    "summary": "Motivated first-year Bachelor of Computer Science student with a strong foundation in programming and problem-solving. Eager to learn and apply new technologies in real-world projects.",
+    "education": [
+      {
+        "degree": "Bachelor of Computer Science",
+        "institution": "University of Texas at Dallas",
+        "location": "gerogia, france",
+        "expectedGraduationYear": 2027
+      }
+    ],
+    "experience": [
+      {
+        "title": "Summer Intern",
+        "company": "Tech Innovators",
+        "location": "gerogia, france",
+        "dates": "Jun 2023 - Aug 2023",
+        "responsibilities": [
+          "Assisted in developing web applications using JavaScript .",
+          "Collaborated with the development team to identify and fix bugs.",
+          "Participated in daily stand-up meetings and sprint planning."
+        ]
+      },
+      {
+        "title": "Volunteer Tutor",
+        "organization": "Community Coding Club",
+        "location": "gerogia, france",
+        "dates": "Sep 2023 - Present",
+        "responsibilities": [
+          "Provided tutoring sessions for high school students in basic programming concepts.",
+          "Helped organize and run coding workshops and events."
+        ]
+      }
+    ],
+    "skills": [
+      "JavaScript",
+      "Python",
+      "C++",
+      "Problem-solving",
+      
+    ],
+    
+    "extracurricularActivities": [
+      {
+        "title": "Member",
+        "organization": "University Coding Club",
+        "dates": "Aug 2023 - Present",
+        "responsibilities": [
+          "Participated in coding competitions and hackathons.",
+          
+        ]
+      },
+      
+    ],
+    "languages": [
+      {
+        "language": "English","Tamil"
+        "proficiency": "Native"
+      },
+      
+    ]
+  };
+  
+  console.log(JSON.stringify(resume, null, 2));
+
+  //Using for loop
+  console.log("\nUsing for loop:");
+for (let i = 0; i < resume.education.length; i++) {
+  console.log(⁠ Education ${i + 1}: ⁠);
+  console.log(resume.education[i]);
+}
+
+for (let i = 0; i < resume.experience.length; i++) {
+  console.log(⁠ Experience ${i + 1}: ⁠);
+  console.log(resume.experience[i]);
+}
+
+//Using forEach 
+
+resume.education.forEach((edu, index) => {
+  console.log(⁠ Education ${index + 1}: ⁠);
+  console.log(edu);
+});
+
+resume.experience.forEach((exp, index) => {
+  console.log(⁠ Experience ${index + 1}: ⁠);
+  console.log(exp);
+});
+
+resume.skills.forEach(skill => {
+  console.log(⁠ Skill: ${skill} ⁠);
+});
+
+
+resume.extracurricularActivities.forEach((activity, index) => {
+  console.log(⁠ Extracurricular Activity ${index + 1}: ⁠);
+  console.log(activity);
+});
+
+resume.languages.forEach((lang, index) => {
+  console.log(⁠ Language ${index + 1}: ⁠);
+  console.log(lang);
+});
